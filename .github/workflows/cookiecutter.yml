@@ -1,4 +1,4 @@
-name: cookiecuter
+name: cookiecutter
 
 on:
   push:
