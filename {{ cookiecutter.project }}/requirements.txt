@@ -1,0 +1,7 @@
+aiofiles
+alembic
+nejma
+pymysql
+sqlalchemy
+starlette
+uvicorn
