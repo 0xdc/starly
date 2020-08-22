@@ -15,12 +15,14 @@ Development:
 
 ```sh
 alembic upgrade head
+(cd static; npm i --dev; parcel serve *.html) &
 DEBUG=1 python -m{{ cookiecutter.project }}
 ```
 
 Production:
 
 ```sh
+(cd static; npm i --dev; parcel build *.html)
 uvicorn {{ cookiecutter.project }}.asgi:app
 ```
 
