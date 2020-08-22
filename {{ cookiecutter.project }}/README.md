@@ -21,7 +21,7 @@ DEBUG=1 python -m{{ cookiecutter.project }}
 Production:
 
 ```sh
-uvicorn {{ cookiecutter.project }}:app
+uvicorn {{ cookiecutter.project }}.asgi:app
 ```
 
 Create migrations:

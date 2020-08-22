@@ -1,3 +1,3 @@
 import uvicorn
 
-uvicorn.run("{{ cookiecutter.project }}:app", reload=True)
+uvicorn.run("{{ cookiecutter.project }}.asgi:app", reload=True)
