@@ -6,6 +6,6 @@ from . import settings
 from .url import routes
 
 if settings.DEBUG:
-    routes.append(Mount("/", app=StaticFiles(directory="static", html=True), name="static"))
+    routes.append(Mount("/", app=StaticFiles(directory="static/dist", html=True), name="static"))
 
 app = Starlette(debug=settings.DEBUG, routes=routes)

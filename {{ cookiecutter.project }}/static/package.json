@@ -1,0 +1,7 @@
+{
+  "name": "{{ cookiecutter.package }}",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
