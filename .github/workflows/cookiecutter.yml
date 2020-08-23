@@ -3,7 +3,7 @@ name: cookiecutter
 on: [ push, pull_request ]
 
 jobs:
-  tests:
+  archive:
 
     runs-on: ubuntu-latest
 
@@ -19,3 +19,8 @@ jobs:
         pip install cookiecutter
     - name: Cookiecutter
       run: cookiecutter --no-input .
+    - name: Archive example
+      uses: actions/upload-artifact@v2
+      with:
+        name: starly
+        path: starly
