@@ -39,3 +39,10 @@ pip install -e .[test]
 coverage run -m pytest
 coverage report -m --include="{{ cookiecutter.project }}/*,migrations/*,tests/*"
 ```
+
+Technology used
+---------------
+* [Starlette](https://www.starlette.io)
+* [SQLAlchemy](https://sqlalchemy.org)
+* [Parcel](https://parceljs.org)
+* [HTML5 platform](https://platform.html5.org)
