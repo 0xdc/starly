@@ -1,20 +1,6 @@
 name: flake8
 
-on:
-  push:
-    branches:
-    - main
-    - master
-    - release
-    - production
-    - develop
-    - 'feature/**'
-    - 'bugfix/**'
-    - 'release/*'
-    - 'hotfix/**'
-    - 'support/**'
-  pull_request:
-    branches: [ release, develop ]
+on: [ push, pull_request ]
 
 jobs:
   lint:
