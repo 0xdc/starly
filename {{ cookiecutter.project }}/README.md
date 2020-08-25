@@ -2,7 +2,7 @@
 ==========================
 
 Requirements:
-* Database server (SQLAlchemy supported)
+* Database server (SQLAlchemy compatible; primarily MySQL, sqlite3 for smaller installations)
 * Static file webserver
 
 Install:
@@ -22,7 +22,7 @@ DEBUG=1 python -m{{ cookiecutter.project }}
 Production:
 
 ```sh
-(cd static; npm install --dev; parcel build *.html)
+(cd static; npm install --dev; npm run build)
 uvicorn {{ cookiecutter.project }}.asgi:app
 ```
 

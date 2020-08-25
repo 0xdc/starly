@@ -1,7 +1,11 @@
 *.egg-info/
 *.pyc
+*.sqlite*
+.cache/
 .coverage
 .eggs/
 .env
+.vscode/.ropeproject/objectdb
 __pycache__/
 node_modules/
+static/dist/

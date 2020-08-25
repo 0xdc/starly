@@ -1,0 +1,58 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "compounds": [
+        {
+            "name": "all",
+            "configurations": [
+                "parcel serve",
+                "uvicorn",
+                "chrome",
+                "firefox"
+            ]
+        }
+    ],
+    "configurations": [
+        {
+            "name": "parcel serve",
+            "request": "launch",
+            "runtimeArgs": [
+                "run-script",
+                "serve"
+            ],
+            "runtimeExecutable": "npm",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node",
+            "cwd": "${workspaceFolder}/static",
+            // Node processes hang around after parcel stops...
+            "postDebugTask": "pkill"
+        },
+        {
+            "name": "uvicorn",
+            "type": "python",
+            "request": "launch",
+            "module": "{{ cookiecutter.project }}",
+            "console": "internalConsole",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "name": "chrome",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:1234",
+            "webRoot": "${workspaceFolder}/static/dist"
+        },
+        {
+            "name": "firefox",
+            "type": "firefox",
+            "request": "launch",
+            "reAttach": true,
+            "url": "http://localhost:1234/",
+            "webRoot": "${workspaceFolder}/static/dist",
+        }
+    ]
+}

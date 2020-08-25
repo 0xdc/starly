@@ -10,7 +10,8 @@ from {{ cookiecutter.project }} import settings
 @pytest.fixture(autouse=True)
 def create_test_database():
     test_url = str(settings.TEST_DATABASE_URL)
-    assert not database_exists(test_url), 'Test database already exists. Aborting tests.'
+    assert not database_exists(test_url), \
+        'Test database already exists. Aborting tests.'
     create_database(test_url)
     config = Config("alembic.ini")
     try:
