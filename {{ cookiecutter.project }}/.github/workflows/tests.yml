@@ -41,4 +41,4 @@ jobs:
         coverage report -m
       env:
         DATABASE_URL: "sqlite:///db.sqlite"
-        DEBUG: True
+        STARLETTE_DEBUG: True

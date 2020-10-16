@@ -16,7 +16,7 @@ Development:
 ```sh
 alembic upgrade head
 (cd static; npm install --dev; parcel serve *.html) &
-DEBUG=1 python -m{{ cookiecutter.project }}
+STARLETTE_DEBUG=1 python -m{{ cookiecutter.project }}
 ```
 
 Production:
